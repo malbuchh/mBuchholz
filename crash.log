@@ -1,0 +1,129 @@
+Crashlog created at 2013-07-16 17:45:59 +0300
+
+===== MESSAGE:
+
+SyntaxError: lib/multilang.rb:3: syntax error, unexpected ')', expecting keyword_end
+    item.identifier.match(/^\/([a-z]{2})\//) || [])[1]
+                                                   ^
+lib/multilang.rb:12: dynamic constant assignment
+LANGUAGE_CODE_TO_NAME_MAPPING = {
+                               ^
+lib/multilang.rb:25: syntax error, unexpected $end, expecting keyword_end
+
+===== COMPILATION STACK:
+
+  (empty)
+
+===== STACK TRACE:
+
+  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/code_snippet.rb:36:in `eval'
+  1. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/code_snippet.rb:36:in `load'
+  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:312:in `block in load_code_snippets'
+  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:312:in `each'
+  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:312:in `load_code_snippets'
+  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:241:in `load'
+  6. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:63:in `load_site'
+  7. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:358:in `run'
+  8. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  9. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
+  12. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  13. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  14. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  15. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/nanoc.rb:39:in `block in define'
+  17. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  18. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  19. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `block in run'
+  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  23. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
+  24. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/bin/nanoc:19:in `<top (required)>'
+  25. /usr/local/bin/nanoc:23:in `load'
+  ... 28 more lines omitted. See full crash log for details.
+
+===== VERSION INFORMATION:
+
+nanoc 3.6.4 © 2007-2013 Denis Defreyne.
+Running ruby 1.9.3 (2012-04-20) on x86_64-linux with RubyGems 1.8.23.
+
+===== SYSTEM INFORMATION:
+
+Linux malte-ThinkPad-T430 3.7.2-030702-generic #201301111424 SMP Fri Jan 11 19:25:11 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+
+===== INSTALLED GEMS:
+
+  adsf 1.1.1
+  colored 1.2
+  cri 2.3.0
+  nanoc 3.6.4
+  rack 1.5.2
+  rb-fsevent 0.9.3
+  thor 0.18.1
+
+===== ENVIRONMENT:
+
+COLORTERM => "gnome-terminal"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-EZcCQgJQ93,guid=8b169b9b465cfa0dba7b986251e4fd4e"
+DEFAULTS_PATH => "/usr/share/gconf/default.default.path"
+DESKTOP_SESSION => "default"
+DISPLAY => ":0"
+GJS_DEBUG_OUTPUT => "stderr"
+GJS_DEBUG_TOPICS => "JS ERROR;JS LOG"
+GNOME_DESKTOP_SESSION_ID => "this-is-deprecated"
+GNOME_KEYRING_CONTROL => "/run/user/malte/keyring-cGHjLm"
+GNOME_KEYRING_PID => "1925"
+GPG_AGENT_INFO => "/run/user/malte/keyring-cGHjLm/gpg:0:1"
+HOME => "/home/malte"
+LANG => "en_US.UTF-8"
+LC_ADDRESS => "en_US.UTF-8"
+LC_IDENTIFICATION => "en_US.UTF-8"
+LC_MEASUREMENT => "en_US.UTF-8"
+LC_MONETARY => "en_US.UTF-8"
+LC_NAME => "en_US.UTF-8"
+LC_NUMERIC => "en_US.UTF-8"
+LC_PAPER => "en_US.UTF-8"
+LC_TELEPHONE => "en_US.UTF-8"
+LC_TIME => "en_US.UTF-8"
+LOGNAME => "malte"
+MANDATORY_PATH => "/usr/share/gconf/default.mandatory.path"
+MDMSESSION => "default"
+MDM_LANG => "en_US.UTF-8"
+MDM_XSERVER_LOCATION => "local"
+OLDPWD => "/home/malte/dev/ruby/mBuchholz/lib"
+PATH => "/home/malte/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/malte/bin:/home/malte/libs/gradle-1.4/bin"
+PWD => "/home/malte/dev/ruby/mBuchholz"
+SESSION_MANAGER => "local/malte-ThinkPad-T430:@/tmp/.ICE-unix/2001,unix/malte-ThinkPad-T430:/tmp/.ICE-unix/2001"
+SHELL => "/bin/bash"
+SHLVL => "1"
+SSH_AGENT_PID => "2082"
+SSH_AUTH_SOCK => "/run/user/malte/keyring-cGHjLm/ssh"
+TERM => "xterm"
+USER => "malte"
+USERNAME => "malte"
+WINDOWID => "46137349"
+WINDOWPATH => "8"
+XAUTHORITY => "/home/malte/.Xauthority"
+XDG_CONFIG_DIRS => "/etc/xdg/xdg-default:/etc/xdg"
+XDG_CURRENT_DESKTOP => "GNOME"
+XDG_DATA_DIRS => "/usr/share/default:/usr/share/gnome:/usr/local/share/:/usr/share/:/usr/share/mdm/"
+XDG_RUNTIME_DIR => "/run/user/malte"
+XDG_SESSION_COOKIE => "6252ec33ed6af34df69c179050ef1ec2-1373961549.359960-401220891"
+_ => "/usr/local/bin/nanoc"
+
+===== LOAD PATHS:
+
+  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib
+  1. /var/lib/gems/1.9.1/gems/colored-1.2/lib
+  2. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib
+  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib
+  4. /usr/local/lib/site_ruby/1.9.1
+  5. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
+  6. /usr/local/lib/site_ruby
+  7. /usr/lib/ruby/vendor_ruby/1.9.1
+  8. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
+  9. /usr/lib/ruby/vendor_ruby
+  10. /usr/lib/ruby/1.9.1
+  11. /usr/lib/ruby/1.9.1/x86_64-linux

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="<%= language_code_of(@item) %>">
+  <head>
+    <meta charset="utf-8">
+    <title>Malte Buchholz - <%= @item[:title] %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Malte" >
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+      
+      h3,h1 {
+					color: #003366;      
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+
+    </style>
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+
+        <ul class="nav nav-pills pull-right">
+							<li><a href="/<%= language_code_of(@item) %>/about">About</a></li>
+          <li><a href="/<%= language_code_of(@item) %>/contact">Contact</a></li>
+          <li><a href="/<%= language_code_of(@item) %>/projects">Projects</a></li>
+        </ul>
+        
+
+        <h1>Malte Buchholz <small> Freelancer </small></h1>
+        <h4 class="muted"> Scalability, Clean-Code, Concurrency </h4>   
+            	<ul class="inline pull-right">
+  <% translations_of(@item).each do |t| %>
+    <li>
+      <% if @item == t %>
+        <span class="active" lang="<%= language_code_of(t) %>">
+          <%= language_name_of(t) %>
+        </span>
+      <% else %>
+        <a href="<%= t.path %>"
+           lang="<%= language_code_of(t) %>"
+           hreflang="<%= language_code_of(t) %>">
+          <%= language_name_of(t) %>
+        </a>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+      </div>
+      
+				
+      <hr>
+
+
+      <div class="row-fluid marketing">
+        <div class="span12">
+							<%= yield %>
+        </div>
+
+
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Malte Buchholz 2013</p>
+
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8">
+//<![CDATA[
+jQuery(function() {
+  jQuery('.primary-nav li').each(function() {
+    var href = jQuery(this).find('a').attr('href');
+    if (href === window.location.pathname) {
+      jQuery(this).addClass('active');
+    }
+  });
+});  
+//]]>
+</script>
+
+  </body>
+</html>
