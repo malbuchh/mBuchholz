@@ -1,14 +1,8 @@
-Crashlog created at 2013-07-16 17:45:59 +0300
+Crashlog created at 2013-07-17 16:21:37 +0300
 
 ===== MESSAGE:
 
-SyntaxError: lib/multilang.rb:3: syntax error, unexpected ')', expecting keyword_end
-    item.identifier.match(/^\/([a-z]{2})\//) || [])[1]
-                                                   ^
-lib/multilang.rb:12: dynamic constant assignment
-LANGUAGE_CODE_TO_NAME_MAPPING = {
-                               ^
-lib/multilang.rb:25: syntax error, unexpected $end, expecting keyword_end
+NoMethodError: undefined method `apply_to' for nil:NilClass
 
 ===== COMPILATION STACK:
 
@@ -16,33 +10,43 @@ lib/multilang.rb:25: syntax error, unexpected $end, expecting keyword_end
 
 ===== STACK TRACE:
 
-  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/code_snippet.rb:36:in `eval'
-  1. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/code_snippet.rb:36:in `load'
-  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:312:in `block in load_code_snippets'
-  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:312:in `each'
-  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:312:in `load_code_snippets'
-  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:241:in `load'
-  6. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:63:in `load_site'
-  7. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:358:in `run'
-  8. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
-  9. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
-  12. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
-  13. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
-  14. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
-  15. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
-  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/nanoc.rb:39:in `block in define'
-  17. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
-  18. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
-  19. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
-  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `block in run'
-  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  23. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
-  24. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/bin/nanoc:19:in `<top (required)>'
-  25. /usr/local/bin/nanoc:23:in `load'
-  ... 28 more lines omitted. See full crash log for details.
+  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:384:in `compile_rep'
+  1. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:340:in `block in compile_reps'
+  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `loop'
+  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `compile_reps'
+  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:58:in `compile'
+  6. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.1/lib/guard/nanoc.rb:65:in `block in recompile'
+  7. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.1/lib/guard/nanoc.rb:63:in `chdir'
+  8. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.1/lib/guard/nanoc.rb:63:in `recompile'
+  9. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.1/lib/guard/nanoc.rb:28:in `run_on_changes'
+  10. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:99:in `block in run_supervised_task'
+  11. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:97:in `catch'
+  12. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:97:in `run_supervised_task'
+  13. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:144:in `block in run_first_task_found'
+  14. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:142:in `each'
+  15. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:142:in `run_first_task_found'
+  16. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:79:in `block in run_on_changes'
+  17. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:175:in `block (3 levels) in scoped_guards'
+  18. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:173:in `each'
+  19. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:173:in `block (2 levels) in scoped_guards'
+  20. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:172:in `catch'
+  21. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:172:in `block in scoped_guards'
+  22. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:170:in `each'
+  23. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:170:in `scoped_guards'
+  24. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard/runner.rb:72:in `run_on_changes'
+  25. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard.rb:105:in `block (2 levels) in setup_listener'
+  26. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard.rb:368:in `block in within_preserved_state'
+  27. <internal:prelude>:10:in `synchronize'
+  28. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard.rb:365:in `within_preserved_state'
+  29. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib/guard.rb:104:in `block in setup_listener'
+  30. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib/listen/listener.rb:252:in `call'
+  31. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib/listen/listener.rb:252:in `on_change'
+  32. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib/listen/listener.rb:287:in `block in initialize_adapter'
+  33. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib/listen/adapter.rb:252:in `call'
+  34. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib/listen/adapter.rb:252:in `report_changes'
+  35. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib/listen/adapter.rb:321:in `poll_changed_directories'
+  ... 38 more lines omitted. See full crash log for details.
 
 ===== VERSION INFORMATION:
 
@@ -56,26 +60,41 @@ Linux malte-ThinkPad-T430 3.7.2-030702-generic #201301111424 SMP Fri Jan 11 19:2
 ===== INSTALLED GEMS:
 
   adsf 1.1.1
+  coderay 1.0.9
   colored 1.2
   cri 2.3.0
+  ffi 1.9.0
+  formatador 0.2.4
+  guard 1.8.1
+  guard-nanoc 1.0.1
+  listen 1.2.2
+  lumberjack 1.0.4
+  method_source 0.8.1
   nanoc 3.6.4
+  pry 0.9.12.2
   rack 1.5.2
   rb-fsevent 0.9.3
+  rb-inotify 0.9.0
+  rb-kqueue 0.2.0
+  slop 3.4.5
   thor 0.18.1
 
 ===== ENVIRONMENT:
 
 COLORTERM => "gnome-terminal"
-DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-EZcCQgJQ93,guid=8b169b9b465cfa0dba7b986251e4fd4e"
+COLUMNS => "80"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-4E0YPCCLnz,guid=e663e9450fd44f7130864ec351e59d60"
 DEFAULTS_PATH => "/usr/share/gconf/default.default.path"
 DESKTOP_SESSION => "default"
 DISPLAY => ":0"
 GJS_DEBUG_OUTPUT => "stderr"
 GJS_DEBUG_TOPICS => "JS ERROR;JS LOG"
 GNOME_DESKTOP_SESSION_ID => "this-is-deprecated"
-GNOME_KEYRING_CONTROL => "/run/user/malte/keyring-cGHjLm"
-GNOME_KEYRING_PID => "1925"
-GPG_AGENT_INFO => "/run/user/malte/keyring-cGHjLm/gpg:0:1"
+GNOME_KEYRING_CONTROL => "/run/user/malte/keyring-BZELr3"
+GNOME_KEYRING_PID => "1964"
+GPG_AGENT_INFO => "/run/user/malte/keyring-BZELr3/gpg:0:1"
+GUARD_NOTIFICATIONS => "---\n- :name: :notifysend\n  :options: {}\n- :name: :terminal_title\n  :options: {}\n"
+GUARD_NOTIFY => "true"
 HOME => "/home/malte"
 LANG => "en_US.UTF-8"
 LC_ADDRESS => "en_US.UTF-8"
@@ -87,43 +106,58 @@ LC_NUMERIC => "en_US.UTF-8"
 LC_PAPER => "en_US.UTF-8"
 LC_TELEPHONE => "en_US.UTF-8"
 LC_TIME => "en_US.UTF-8"
+LINES => "24"
 LOGNAME => "malte"
 MANDATORY_PATH => "/usr/share/gconf/default.mandatory.path"
 MDMSESSION => "default"
 MDM_LANG => "en_US.UTF-8"
 MDM_XSERVER_LOCATION => "local"
-OLDPWD => "/home/malte/dev/ruby/mBuchholz/lib"
+OLDPWD => "/home/malte"
 PATH => "/home/malte/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/malte/bin:/home/malte/libs/gradle-1.4/bin"
 PWD => "/home/malte/dev/ruby/mBuchholz"
-SESSION_MANAGER => "local/malte-ThinkPad-T430:@/tmp/.ICE-unix/2001,unix/malte-ThinkPad-T430:/tmp/.ICE-unix/2001"
+SESSION_MANAGER => "local/malte-ThinkPad-T430:@/tmp/.ICE-unix/1973,unix/malte-ThinkPad-T430:/tmp/.ICE-unix/1973"
 SHELL => "/bin/bash"
 SHLVL => "1"
-SSH_AGENT_PID => "2082"
-SSH_AUTH_SOCK => "/run/user/malte/keyring-cGHjLm/ssh"
+SSH_AGENT_PID => "2066"
+SSH_AUTH_SOCK => "/run/user/malte/keyring-BZELr3/ssh"
 TERM => "xterm"
 USER => "malte"
 USERNAME => "malte"
-WINDOWID => "46137349"
+WINDOWID => "50331653"
 WINDOWPATH => "8"
 XAUTHORITY => "/home/malte/.Xauthority"
 XDG_CONFIG_DIRS => "/etc/xdg/xdg-default:/etc/xdg"
 XDG_CURRENT_DESKTOP => "GNOME"
 XDG_DATA_DIRS => "/usr/share/default:/usr/share/gnome:/usr/local/share/:/usr/share/:/usr/share/mdm/"
 XDG_RUNTIME_DIR => "/run/user/malte"
-XDG_SESSION_COOKIE => "6252ec33ed6af34df69c179050ef1ec2-1373961549.359960-401220891"
-_ => "/usr/local/bin/nanoc"
+XDG_SESSION_COOKIE => "6252ec33ed6af34df69c179050ef1ec2-1374002527.811476-2077012913"
+_ => "/usr/local/bin/guard"
 
 ===== LOAD PATHS:
 
-  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib
-  1. /var/lib/gems/1.9.1/gems/colored-1.2/lib
-  2. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib
-  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib
-  4. /usr/local/lib/site_ruby/1.9.1
-  5. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
-  6. /usr/local/lib/site_ruby
-  7. /usr/lib/ruby/vendor_ruby/1.9.1
-  8. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
-  9. /usr/lib/ruby/vendor_ruby
-  10. /usr/lib/ruby/1.9.1
-  11. /usr/lib/ruby/1.9.1/x86_64-linux
+  0. /var/lib/gems/1.9.1/gems/thor-0.18.1/lib
+  1. /var/lib/gems/1.9.1/gems/rb-fsevent-0.9.3/lib
+  2. /var/lib/gems/1.9.1/gems/ffi-1.9.0/lib
+  3. /var/lib/gems/1.9.1/gems/ffi-1.9.0/ext/ffi_c
+  4. /var/lib/gems/1.9.1/gems/rb-inotify-0.9.0/lib
+  5. /var/lib/gems/1.9.1/gems/rb-kqueue-0.2.0/lib
+  6. /var/lib/gems/1.9.1/gems/listen-1.2.2/lib
+  7. /var/lib/gems/1.9.1/gems/coderay-1.0.9/lib
+  8. /var/lib/gems/1.9.1/gems/slop-3.4.5/lib
+  9. /var/lib/gems/1.9.1/gems/method_source-0.8.1/lib
+  10. /var/lib/gems/1.9.1/gems/pry-0.9.12.2/lib
+  11. /var/lib/gems/1.9.1/gems/lumberjack-1.0.4/lib
+  12. /var/lib/gems/1.9.1/gems/formatador-0.2.4/lib
+  13. /var/lib/gems/1.9.1/gems/guard-1.8.1/lib
+  14. /var/lib/gems/1.9.1/gems/colored-1.2/lib
+  15. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib
+  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib
+  17. /var/lib/gems/1.9.1/gems/guard-nanoc-1.0.1/lib
+  18. /usr/local/lib/site_ruby/1.9.1
+  19. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
+  20. /usr/local/lib/site_ruby
+  21. /usr/lib/ruby/vendor_ruby/1.9.1
+  22. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
+  23. /usr/lib/ruby/vendor_ruby
+  24. /usr/lib/ruby/1.9.1
+  25. /usr/lib/ruby/1.9.1/x86_64-linux

@@ -3,6 +3,9 @@ title: Projects
 canonical_identifier: projects
 ---
 
-<h1>Test Home</h1>
+<h3>Some extracts from my <a href="https://github.com/malbuchh">github profile</a>.</h3>
 
-<p>Sample Homepage</p>
+<dl>
+  <dt><a href="https://github.com/malbuchh/scala-koans">Scala-Koans</a></dt>
+  <dd>My solutions for the exercises from the website <a href="http://www.scalakoans.org/">scalakoans.org</a>. The Koans could be used to introduce Scala to an experienced developer.</dd>
+</dl>

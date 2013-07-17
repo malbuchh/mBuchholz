@@ -1,5 +1,16 @@
 ---
-title: A New Item
+title: Contact
+canonical_identifier: contact
 ---
+<h1> Contact </h1>
+<address>
+  <strong>Malte Buchholz</strong><br>
+  Bachelor of Science: Wirtschaftsinformatik (business informatics)<br>
+  Freelancer/Software Developer/IT-Consultant<br>
+  <a href="mailto:mail@maltebuchholz.com">mail@maltebuchholz.com</a><br>
+  <abbr title="Phone">P:</abbr> +49(0) 151 52716891<br>
+	Berlin, Germany<br>
+	responsible according to §6 MDStV<br>
+</address>
 
-Hi, I'm a new item!
+

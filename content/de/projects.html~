@@ -1,5 +1,11 @@
 ---
-title: A New Item
+title: Referenzen
+canonical_identifier: projects
 ---
 
-Hi, I'm a new item!
+<h3>Einige Projekte aus meinem <a href="https://github.com/malbuchh">Github-Profil</a>.</h3>
+
+<dl>
+  <dt><a href="https://github.com/malbuchh/scala-koans">Scala-Koans</a></dt>
+  <dd>Meine Lösungen der Aufgaben von der Webseite <a href="http://www.scalakoans.org/">scalakoans.org</a>. Die "Koans" eignen sich gut, um erfahrenen Programmieren einen Einstieg in Scala zu bieten.</dd>
+</dl>

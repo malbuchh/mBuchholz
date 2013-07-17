@@ -1,5 +1,16 @@
 ---
-title: A New Item
+title: Contact
+canonical_identifier: contact
 ---
 
-Hi, I'm a new item!
+<address>
+  <strong>Malte Buchholz</strong><br>
+  Bachelor of Science: Wirtschaftsinformatik (business informatics)<br>
+  Freelancer/Software Developer/IT-Consultant<br>
+  <a href="mailto:mail@maltebuchholz.com">mail@maltebuchholz.com</a><br>
+  <abbr title="Telefonnnummer">T:</abbr> +(0)49 151 527 16 891<br>
+	Berlin, Deutschland<br>
+	inhaltlich verantwortlich gemäß §6 MDStV<br>
+</address>
+
+
